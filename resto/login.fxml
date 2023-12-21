@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dkk" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="498.0" prefWidth="545.0" style="-fx-background-color: #f5f3e6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resto.LoginController">
+   <children>
+      <ImageView fitHeight="819.0" fitWidth="585.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Selbstgemachte%20Pizza%20mit%20Pesto%20Rosso.jpeg" />
+         </image>
+      </ImageView>
+      <StackPane blendMode="SCREEN" layoutX="74.0" layoutY="60.0" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #5a5a5a;">
+         <children>
+            <Pane prefHeight="815.0" prefWidth="515.0" StackPane.alignment="CENTER">
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </StackPane>
+      <StackPane layoutX="124.0" layoutY="391.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <GridPane>
+                     <children>
+                        <Label text="Username:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <font>
+                              <Font name="Inter ExtraBold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" text="Password:" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Inter ExtraBold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="user" promptText="Username" style="-fx-background-radius: 100; -fx-background-color: #feeaab;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <PasswordField fx:id="password" promptText="Password" style="-fx-background-radius: 100; -fx-background-color: #feeaab;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="109.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="189.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <StackPane>
+                     <children>
+                        <Button fx:id="loginButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" style="-fx-background-color: #ffb793;" text="Login" StackPane.alignment="CENTER_RIGHT" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <Hyperlink fx:id="register" alignment="CENTER" layoutX="370.0" layoutY="486.0" onAction="#registerHandler" text="Register" textFill="#ffb793">
+         <font>
+            <Font name="Inter ExtraBold" size="12.0" />
+         </font></Hyperlink>
+      <Label layoutX="111.0" layoutY="310.0" text="LOGIN FORM" textFill="WHITE">
+         <font>
+            <Font name="HYWenHei 85W" size="48.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
